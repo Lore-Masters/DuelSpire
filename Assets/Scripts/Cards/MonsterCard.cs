@@ -8,7 +8,7 @@ public class MonsterCard : ScriptableObject
 {
         [Tooltip("The name of the card")]
         [SerializeField]
-        protected string name;
+        protected string nameOfMonster;
 
         [Tooltip("The types the card is a part of")]
         [SerializeField]
