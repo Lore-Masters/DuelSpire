@@ -11,7 +11,7 @@ public enum State
 	StartOfPlayerTurnState,
 	EndOfPlayerTurnState,
 	StartOfEnemyTurnState,
-	EndOfEnemyTurnState,
+    EndOfEnemyTurnState,
 	EndOfCombatState
 };
 
@@ -21,6 +21,7 @@ public class MonsterSetupSignal : ASignal { }
 public class StartOfPlayerTurnSignal : ASignal { }
 public class EndOfPlayerTurnSignal : ASignal { }
 public class StartOfEnemyTurnSignal : ASignal { }
+public class EnemyTurnSignal : ASignal { }
 public class EndOfEnemyTurnSignal : ASignal { }
 public class EndOfCombatSignal : ASignal { }
 
@@ -36,9 +37,14 @@ public class StateMachine : MonoBehaviour
 		Signals.Get<StartOfPlayerTurnSignal>().AddListener(SetStartOfPlayerTurn);
 		Signals.Get<EndOfPlayerTurnSignal>().AddListener(SetEndOfPlayerTurn);
 		Signals.Get<StartOfEnemyTurnSignal>().AddListener(SetStartOfEnemyTurn);
-		Signals.Get<EndOfEnemyTurnSignal>().AddListener(SetEndOfEnemyTurn);
+        Signals.Get<EndOfEnemyTurnSignal>().AddListener(SetEndOfEnemyTurn);
 		Signals.Get<EndOfCombatSignal>().AddListener(SetEndOfCombat);
 	}
+
+    public void test()
+    {
+        Signals.Get<StartOfMatchSignal>().Dispatch();
+    }
 
 	private void SetStartOfMatch()
 	{
@@ -70,7 +76,7 @@ public class StateMachine : MonoBehaviour
 		currentState = State.StartOfEnemyTurnState;
 	}
 
-	private void SetEndOfEnemyTurn()
+    private void SetEndOfEnemyTurn()
 	{
 		currentState = State.EndOfEnemyTurnState;
 	}
