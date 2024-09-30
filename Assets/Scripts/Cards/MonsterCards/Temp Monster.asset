@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db70d5fae6fb3f42bb7e9a542dce87a, type: 3}
   m_Name: Temp Monster
   m_EditorClassIdentifier: 
-  name: Blue Eyes
+  nameOfMonster: 
   types: 00000000
   monsterImage: {fileID: 0}
   health: 100
-  attack: 20
+  attack: 1000
   targetPriority: 0
-  flavorText: 
+  baseEffect:
+    timeToHappen: 0
+  specialEffect:
+    timeToHappen: 0
+  flavorText: Cool and Based
+  currentStatuses: []

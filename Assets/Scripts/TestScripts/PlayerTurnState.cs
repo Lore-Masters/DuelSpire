@@ -11,7 +11,7 @@ public class PlayerTurnState : NoraState
         //enable end of turn button
         //enable play cards
         //tick down effects
-        Debug.Log("Entering New Player Turn");
+        Debug.Log("Starting Player Turn");
     }
 
     public override void OnUpdate()
@@ -23,7 +23,7 @@ public class PlayerTurnState : NoraState
     {
         //disable end of turn button
         //discard hand
-        Debug.Log("Exiting Player Turn");
+        Debug.Log("Ending Player Turn");
     }
 }
 
