@@ -10,17 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db70d5fae6fb3f42bb7e9a542dce87a, type: 3}
-  m_Name: Temp Monster
+  m_Name: BasicMonster
   m_EditorClassIdentifier: 
-  nameOfMonster: 
-  types: 00000000
-  monsterImage: {fileID: 0}
-  health: 100
-  attack: 1000
+  nameOfCard: 
+  cardImage: {fileID: 0}
   targetPriority: 0
-  baseEffect:
-    timeToHappen: 0
+  basicEffect:
+    rid: 2093860047383429120
   specialEffect:
-    timeToHappen: 0
-  flavorText: Cool and Based
+    rid: -2
+  flavorText: 
+  types: 
+  health: 0
+  attack: 0
   currentStatuses: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2093860047383429120
+      type: {class: BasicMonsterEffect, ns: , asm: Assembly-CSharp}
+      data: 
