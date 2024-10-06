@@ -27,62 +27,35 @@ public class EndOfCombatSignal : ASignal { }
 
 public class StateMachine : MonoBehaviour
 {
-	public State currentState;
+	public static State currentState;
 
 	private void Start()
 	{
-		Signals.Get<StartOfMatchSignal>().AddListener(SetStartOfMatch);
+        //TODO: Get rid of this
+        /*Signals.Get<StartOfMatchSignal>().AddListener(SetStartOfMatch);
 		Signals.Get<PlayerSetupSignal>().AddListener(SetPlayerSetup);
 		Signals.Get<MonsterSetupSignal>().AddListener(SetMonsterSetup);
 		Signals.Get<StartOfPlayerTurnSignal>().AddListener(SetStartOfPlayerTurn);
 		Signals.Get<EndOfPlayerTurnSignal>().AddListener(SetEndOfPlayerTurn);
 		Signals.Get<StartOfEnemyTurnSignal>().AddListener(SetStartOfEnemyTurn);
         Signals.Get<EndOfEnemyTurnSignal>().AddListener(SetEndOfEnemyTurn);
-		Signals.Get<EndOfCombatSignal>().AddListener(SetEndOfCombat);
+		Signals.Get<EndOfCombatSignal>().AddListener(SetEndOfCombat);*/
+
+        Signals.Get<StartOfMatchSignal>().Dispatch();
 	}
 
-    public void test()
+    private void Update()
     {
-        Signals.Get<StartOfMatchSignal>().Dispatch();
+        Debug.Log(currentState);
     }
 
-	private void SetStartOfMatch()
-	{
-		currentState = State.StartOfMatchState;
-	}
+    public static State GetState()
+    {
+        return currentState;
+    }
 
-	private void SetPlayerSetup()
-	{
-		currentState = State.PlayerSetupState;
-	}
-
-	private void SetMonsterSetup()
-	{
-		currentState = State.MonsterSetupState;
-	}
-
-	private void SetStartOfPlayerTurn()
-	{
-		currentState = State.StartOfPlayerTurnState;
-	}
-
-	private void SetEndOfPlayerTurn()
-	{
-		currentState = State.EndOfPlayerTurnState;
-	}
-
-	private void SetStartOfEnemyTurn()
-	{
-		currentState = State.StartOfEnemyTurnState;
-	}
-
-    private void SetEndOfEnemyTurn()
-	{
-		currentState = State.EndOfEnemyTurnState;
-	}
-
-	private void SetEndOfCombat()
-	{
-		currentState = State.EndOfCombatState;
-	}
+    public static void SetState(State newState)
+    {
+        currentState = newState;
+    }
 }

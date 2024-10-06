@@ -12,15 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db70d5fae6fb3f42bb7e9a542dce87a, type: 3}
   m_Name: TempMonster
   m_EditorClassIdentifier: 
-  nameOfMonster: 
+  nameOfCard: 
+  cardImage: {fileID: 0}
+  targetPriority: 0
+  basicEffect:
+    rid: 4232780152845369345
+  specialEffect:
+    rid: -2
+  flavorText: Cool and Based
   types: 00000000
-  monsterImage: {fileID: 0}
   health: 100
   attack: 1000
-  targetPriority: 0
-  baseEffect:
-    timeToHappen: 0
-  specialEffect:
-    timeToHappen: 0
-  flavorText: Cool and Based
   currentStatuses: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4232780152845369345
+      type: {class: BasicMonsterEffect, ns: , asm: Assembly-CSharp}
+      data: 

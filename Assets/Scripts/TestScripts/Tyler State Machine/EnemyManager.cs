@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
         foreach (var enemy in enemies)
         {
             //TODO: Should want to have this be a method to call in the enemy script... probably
-            player.damagePlayer(enemy.attack);
+            enemy.activateBasicEffect();
             //Debug.Log("Health: " + player.health);
         }
 

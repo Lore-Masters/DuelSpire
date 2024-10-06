@@ -5,13 +5,14 @@ using deVoid.Utils;
 
 public class MonsterSetupStateScript : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         Signals.Get<MonsterSetupSignal>().AddListener(OnEnter);
     }
 
     private void OnEnter()
     {
+        StateMachine.SetState(State.MonsterSetupState);
         Signals.Get<StartOfPlayerTurnSignal>().Dispatch();
     }
 }

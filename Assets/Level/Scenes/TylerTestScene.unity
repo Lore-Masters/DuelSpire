@@ -215,12 +215,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173361589}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15858498, y: 0.047425725, z: 0.041695483}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14954278, y: 0.027846394, z: -0.006482344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1882717092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &173361591
 MonoBehaviour:
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 11400000, guid: 72e363b4ecee43145bd813f90c16ee63, type: 2}
+  - {fileID: 11400000, guid: a5d1cbc67697bb049a226ad0a7007e30, type: 2}
   player: {fileID: 977412598}
 --- !u!1 &202496481
 GameObject:
@@ -575,9 +576,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 757281018}
-        m_TargetAssemblyTypeName: StateMachine, Assembly-CSharp
-        m_MethodName: test
+      - m_Target: {fileID: 567300710}
+        m_TargetAssemblyTypeName: StartOfPlayerTurnStateScript, Assembly-CSharp
+        m_MethodName: EndPlayerTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -853,7 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cde41cb00768f5439832558357f9c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
 --- !u!1 &819838182
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,6 +940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 960064473}
+  - component: {fileID: 960064474}
   m_Layer: 0
   m_Name: EndOfEnemyTurn
   m_TagString: Untagged
@@ -962,6 +963,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1882717092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &960064474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960064472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca70f9554a506f409d693f4e2ab531f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977412597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1228,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 819838183}
+  - {fileID: 173361590}
   - {fileID: 960064473}
   m_Father: {fileID: 732359508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1223,7 +1237,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 173361590}
   - {fileID: 757281017}
   - {fileID: 977412600}
   - {fileID: 698312402}

@@ -5,13 +5,14 @@ using deVoid.Utils;
 
 public class EndOfenemyTurnStateScript : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         Signals.Get<EndOfEnemyTurnSignal>().AddListener(OnEnter);
     }
 
 	private void OnEnter()
 	{
-        Signals.Get<StartOfMatchSignal>().Dispatch();
+        StateMachine.SetState(State.EndOfEnemyTurnState);
+        Signals.Get<StartOfPlayerTurnSignal>().Dispatch();
 	}
 }

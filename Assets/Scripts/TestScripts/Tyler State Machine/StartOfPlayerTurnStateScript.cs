@@ -5,13 +5,22 @@ using deVoid.Utils;
 
 public class StartOfPlayerTurnStateScript : MonoBehaviour
 {
-    private void Start()
+    private State thisState;
+
+    private void Awake()
     {
+        thisState = State.StartOfPlayerTurnState;
         Signals.Get<StartOfPlayerTurnSignal>().AddListener(OnEnter);
     }
 
     private void OnEnter()
     {
-        Signals.Get<EndOfPlayerTurnSignal>().Dispatch();
+        StateMachine.SetState(thisState);
+    }
+
+    public void EndPlayerTurn()
+    {
+        if (StateMachine.GetState() == thisState)
+            Signals.Get<EndOfPlayerTurnSignal>().Dispatch();
     }
 }
