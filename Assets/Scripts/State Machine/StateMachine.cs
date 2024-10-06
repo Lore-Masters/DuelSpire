@@ -46,7 +46,7 @@ public class StateMachine : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
     }
 
     public static State GetState()
