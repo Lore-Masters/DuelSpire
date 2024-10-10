@@ -18,7 +18,11 @@ public class MonsterCardSO : GenericCardSO
 	[SerializeField]
 	public int attack;
 
-	[Tooltip("The current statuses the monster has")]
+    [Tooltip("The target the card will prioritise")]
+    [SerializeField]
+    public TargetPriority targetPriority;
+
+    [Tooltip("The current statuses the monster has")]
 	[SerializeField]
 	public List<StatusEffect> currentStatuses;
 

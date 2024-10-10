@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99937e81dcf3cfb4c92282cbc2e1c594, type: 3}
+  m_Name: BasicSpell
+  m_EditorClassIdentifier: 
+  nameOfCard: 
+  cardImage: {fileID: 21300000, guid: ba0292a7e4e6eaa4689130d412bbf450, type: 3}
+  basicEffect:
+    rid: 4232780245233828507
+  specialEffect:
+    rid: -2
+  flavorText: 
+  targetType: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 4232780245233828507
+      type: {class: BasicSpellEffect, ns: , asm: Assembly-CSharp}
+      data: 

@@ -22,9 +22,9 @@ public class PlayerInfo : MonoBehaviour
         
     }
 
-    public void damagePlayer(int damage)
+    public void damagePlayer(int amount)
     {
-        health -= damage;
+        health += amount;
         Debug.Log("Health: " + health);
         if(health < 1)
         {

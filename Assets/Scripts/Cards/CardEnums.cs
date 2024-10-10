@@ -1,12 +1,21 @@
 public enum MonsterTypes
 {
-    dark
+    Dark
 }
 
 public enum TargetPriority
 {
-    front,
-    back,
-    low,
-    high
+    Front,
+    Back,
+    Low,
+    High
+}
+
+public enum TargetingType
+{
+    NoTarget,
+    SpecificSide,
+    SpecificTarget,
+    SpecificEnemy,
+    SpecificAlly
 }

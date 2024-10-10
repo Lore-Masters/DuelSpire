@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class GenericCardSO : ScriptableObject
 {
-	[Tooltip("The name of the card")]
+    [Tooltip("The name of the card")]
 	[SerializeField]
-	protected string nameOfCard;
+	public string nameOfCard;
 
 	[Tooltip("The image the card has")]
 	[SerializeField]
-	protected Sprite cardImage;
+	public Sprite cardImage;
 
-	[Tooltip("The target the card will prioritise")]
-	[SerializeField]
-	public TargetPriority targetPriority;
+    [Tooltip("The basic effect of the monster")]
+    [SerializeReference]
+    public ICardEffect basicEffect;
 
-	[Tooltip("The basic effect of the monster")]
+    [Tooltip("The special effect of the monster")]
 	[SerializeReference]
-	protected ICardEffect basicEffect;
-
-	[Tooltip("The special effect of the monster")]
-	[SerializeReference]
-	protected ICardEffect specialEffect;
+    public ICardEffect specialEffect;
 
 	[Tooltip("The special effect of the monster")]
 	[SerializeField]
-	protected string flavorText;
+    public string flavorText;
 
 
 	public void activateBasicEffect()
