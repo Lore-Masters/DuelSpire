@@ -36,7 +36,7 @@ public class CardManager : MonoBehaviour
         if (transform.localPosition != new Vector3(0,0,0) && Input.GetMouseButtonUp(0))
         {
             cardSO.activateBasicEffect();
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }
