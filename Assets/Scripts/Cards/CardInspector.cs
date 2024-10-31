@@ -76,7 +76,6 @@ public class CardInspector : Editor
                 var tp = index >= 0 ? _availableTypes[index] : null;
                 var obj = tp != null ? System.Activator.CreateInstance(tp) : null;
                 prop.managedReferenceValue = obj;
-                this.serializedObject.ApplyModifiedProperties();
             }
 
             EditorGUI.indentLevel--;
@@ -95,10 +94,12 @@ public class CardInspector : Editor
                 var tp = index >= 0 ? _availableTypes[index] : null;
                 var obj = tp != null ? System.Activator.CreateInstance(tp) : null;
                 prop.managedReferenceValue = obj;
-                this.serializedObject.ApplyModifiedProperties();
             }
 
             EditorGUI.indentLevel--;
+            this.serializedObject.ApplyModifiedProperties();
+
+
         }
     }
 

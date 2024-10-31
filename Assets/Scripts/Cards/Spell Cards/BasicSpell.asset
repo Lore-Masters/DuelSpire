@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99937e81dcf3cfb4c92282cbc2e1c594, type: 3}
   m_Name: BasicSpell
   m_EditorClassIdentifier: 
-  nameOfCard: 
+  nameOfCard: Blue Boy
   cardImage: {fileID: 21300000, guid: ba0292a7e4e6eaa4689130d412bbf450, type: 3}
   basicEffect:
-    rid: 4232780245233828507
+    rid: 4232780719993651201
   specialEffect:
     rid: -2
-  flavorText: 
-  targetType: 0
+  flavorText: One Blue Boy
+  targetType: 4
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 4232780245233828507
+    - rid: 4232780719993651201
       type: {class: BasicSpellEffect, ns: , asm: Assembly-CSharp}
       data: 

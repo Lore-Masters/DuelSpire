@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba3c4c0f5a201e4686a971d95bfe473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &320359621 stripped
-Transform:
+--- !u!224 &320359621 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 2260339392078168997, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
   m_PrefabInstance: {fileID: 7533830953633926022}
   m_PrefabAsset: {fileID: 0}
@@ -1275,6 +1275,14 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2260339392078168997, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000040054
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260339392078168997, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000012875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260339392078168997, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -1289,30 +1297,6 @@ PrefabInstance:
     - target: {fileID: 2327321264949934511, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
       propertyPath: m_Name
       value: Card
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257489829799797128, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257489829799797128, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3257489829799797128, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 35.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5697386316935282945, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5697386316935282945, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5697386316935282945, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 498791109293798895, guid: 806c4fcdd0c6b5045838480bb1c13471, type: 3}

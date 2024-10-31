@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class CardManager : MonoBehaviour
 {
@@ -11,11 +12,22 @@ public class CardManager : MonoBehaviour
     [SerializeField]
     private Image cardArt;
 
+    [SerializeField]
+    private TextMeshProUGUI cardName;
+
+    [SerializeField]
+    private TextMeshProUGUI cardDescription;
+
+    [SerializeField]
+    private TextMeshProUGUI cardFlavor;
+
     // Start is called before the first frame update
     void Start()
     {
         cardArt.sprite = cardSO.cardImage;
-        GetComponentInChildren<ParticleSystem>().Pause();
+        cardName.text = cardSO.nameOfCard;
+        //cardDescription.text = cardSO.nameOfCard;
+        cardFlavor.text = cardSO.flavorText;
     }
 
     // Update is called once per frame
